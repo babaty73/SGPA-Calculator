@@ -1,18 +1,24 @@
 import Calculator from "@/components/Calculator";
 import GradeScale from "@/components/GradeScale";
 import ThemeToggle from "@/components/ThemeToggle";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   return (
     <>
+      <Analytics />
+
       <header className="border-b border-line bg-surface">
         <div className="mx-auto flex max-w-4xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-start sm:justify-between sm:py-8">
           <div className="min-w-0">
             <h1 className="text-2xl font-bold leading-tight sm:text-3xl">
               SGPA Calculator
             </h1>
-            <p className="mt-1 text-muted">Calculate your semester GPA in seconds.</p>
+            <p className="mt-1 text-muted">
+              Calculate your semester GPA in seconds.
+            </p>
           </div>
+
           <div className="flex justify-start sm:justify-end">
             <ThemeToggle />
           </div>
@@ -21,6 +27,7 @@ export default function Home() {
 
       <main className="mx-auto w-full max-w-4xl space-y-6 px-3 py-8 sm:px-4">
         <Calculator />
+
         <div className="grid gap-6 md:grid-cols-2 md:items-start">
           <GradeScale />
         </div>

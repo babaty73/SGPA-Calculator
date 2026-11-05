@@ -21,43 +21,45 @@ export default function CourseRow({ course, index, onChange, onRemove }: Props) 
 
   return (
     <li className="row-in rounded-xl border border-line bg-surface p-3">
-      <div className="flex items-center gap-2">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
         <input
           aria-label={`Course ${n} name`}
-          className={`${inputCls} flex-1`}
+          className={`${inputCls} min-w-0 flex-1`}
           type="text"
           placeholder={`Course ${n}`}
           value={course.name}
           onChange={(e) => onChange(course.id, "name", e.target.value)}
         />
-        <input
-          aria-label={`Course ${n} percentage`}
-          className={`${inputCls} w-20 shrink-0 sm:w-32 ${pctBad ? "border-red-500" : ""}`}
-          type="text"
-          inputMode="decimal"
-          placeholder="Percent"
-          value={course.percentage}
-          aria-invalid={pctBad}
-          onChange={(e) => onChange(course.id, "percentage", e.target.value)}
-        />
-        <input
-          aria-label={`Course ${n} credit hours`}
-          className={`${inputCls} w-16 shrink-0 sm:w-28 ${crBad ? "border-red-500" : ""}`}
-          type="text"
-          inputMode="decimal"
-          placeholder="Credits"
-          value={course.credits}
-          aria-invalid={crBad}
-          onChange={(e) => onChange(course.id, "credits", e.target.value)}
-        />
-        <button
-          type="button"
-          onClick={() => onRemove(course.id)}
-          aria-label={`Remove course ${course.name.trim() || n}`}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-muted hover:bg-red-500/10 hover:text-danger"
-        >
-          <Trash2 size={18} aria-hidden="true" />
-        </button>
+        <div className="flex items-center gap-2 sm:shrink-0">
+          <input
+            aria-label={`Course ${n} percentage`}
+            className={`${inputCls} w-24 shrink-0 sm:w-32 ${pctBad ? "border-red-500" : ""}`}
+            type="text"
+            inputMode="decimal"
+            placeholder="Percent"
+            value={course.percentage}
+            aria-invalid={pctBad}
+            onChange={(e) => onChange(course.id, "percentage", e.target.value)}
+          />
+          <input
+            aria-label={`Course ${n} credit hours`}
+            className={`${inputCls} w-20 shrink-0 sm:w-28 ${crBad ? "border-red-500" : ""}`}
+            type="text"
+            inputMode="decimal"
+            placeholder="Credits"
+            value={course.credits}
+            aria-invalid={crBad}
+            onChange={(e) => onChange(course.id, "credits", e.target.value)}
+          />
+          <button
+            type="button"
+            onClick={() => onRemove(course.id)}
+            aria-label={`Remove course ${course.name.trim() || n}`}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-muted hover:bg-red-500/10 hover:text-danger"
+          >
+            <Trash2 size={18} aria-hidden="true" />
+          </button>
+        </div>
       </div>
 
       {(pctBad || crBad) && (
@@ -67,7 +69,7 @@ export default function CourseRow({ course, index, onChange, onRemove }: Props) 
         </p>
       )}
 
-      <p className="mt-3 flex items-center gap-6 text-sm" aria-live="polite">
+      <p className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm" aria-live="polite">
         <span>
           <span className="text-muted">Grade: </span>
           <span className={`inline-block min-w-8 rounded-md px-2 py-0.5 text-center font-semibold ${graded ? "bg-brand-100 text-brand-text" : "text-muted"}`}>

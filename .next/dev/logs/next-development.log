@@ -1,0 +1,6 @@
+{"timestamp":"00:00:48.713","source":"Server","level":"LOG","message":"- Cache Components enabled"}
+{"timestamp":"00:00:48.715","source":"Server","level":"LOG","message":"- Partial Prefetching enabled"}
+{"timestamp":"00:00:48.716","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:48.722","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 825ms. If /home/imran/Desktop/imran-website/projects/astu-sgpa-phase2/astu-sgpa/.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
+{"timestamp":"00:00:51.884","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:01:37.820","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}

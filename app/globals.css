@@ -1,49 +1,55 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-brand-50: #f5f2ff;
-  --color-brand-100: #ebe5ff;
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
   --color-brand-200: #d6caff;
   --color-brand-500: #6d3fe0;
   --color-brand-600: #5b2fc9;
   --color-brand-700: #4a24a8;
-  --color-ink: #1c1730;
-  --color-muted: #6b6683;
-  --color-line: #e6e2f2;
-  --color-paper: #faf9fd;
-  --color-surface: #ffffff;
-  --color-surface-strong: #f5f2ff;
-  --color-input: #ffffff;
+  --color-brand-text: var(--brand-text);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-danger: var(--danger);
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 :root {
-  color-scheme: light;
-  --color-ink: #1c1730;
-  --color-muted: #6b6683;
-  --color-line: #e6e2f2;
-  --color-paper: #faf9fd;
-  --color-surface: #ffffff;
-  --color-surface-strong: #f5f2ff;
-  --color-input: #ffffff;
+  --paper: #faf9fd;
+  --surface: #ffffff;
+  --ink: #1c1730;
+  --muted: #6b6683;
+  --line: #e6e2f2;
+  --brand-50: #f5f2ff;
+  --brand-100: #ebe5ff;
+  --brand-text: #4a24a8;
+  --danger: #dc2626;
 }
 
-html[data-theme="dark"] {
+:root.dark {
   color-scheme: dark;
-  --color-ink: #f3f1fb;
-  --color-muted: #b8b3d0;
-  --color-line: #2d2a3b;
-  --color-paper: #0f1323;
-  --color-surface: #171d2d;
-  --color-surface-strong: #1f2940;
-  --color-input: #101827;
+  --paper: #12101c;
+  --surface: #1b1829;
+  --ink: #ece9f7;
+  --muted: #a29cbd;
+  --line: #2e2942;
+  --brand-50: #251d40;
+  --brand-100: #33275f;
+  --brand-text: #cdbcff;
+  --danger: #f87171;
 }
+
+.theme-icon-sun { display: none; }
+:root.dark .theme-icon-sun { display: inline; }
+:root.dark .theme-icon-moon { display: none; }
 
 body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  transition: background-color 180ms ease, color 180ms ease;
 }
 
 :focus-visible {

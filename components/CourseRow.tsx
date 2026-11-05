@@ -10,7 +10,7 @@ interface Props {
 }
 
 const inputCls =
-  "w-full rounded-lg border border-line bg-[var(--color-input)] px-3 py-2 text-base text-ink placeholder:text-muted/70 focus:border-brand-500";
+  "w-full min-w-0 rounded-lg border border-line bg-surface px-2 py-2 text-base text-ink placeholder:text-muted/60 focus:border-brand-500 sm:px-3";
 
 export default function CourseRow({ course, index, onChange, onRemove }: Props) {
   const n = index + 1;
@@ -20,88 +20,65 @@ export default function CourseRow({ course, index, onChange, onRemove }: Props) 
   const crBad = course.credits.trim() !== "" && parseCredits(course.credits) === null;
 
   return (
-    <li className="row-in rounded-xl border border-line bg-[var(--color-surface)] p-3 md:grid md:grid-cols-[minmax(0,1fr)_7rem_7rem_4.5rem_4.5rem_2.5rem] md:items-start md:gap-3 md:rounded-none md:border-0 md:border-b md:bg-transparent md:px-0 md:py-2">
-      <div className="mb-3 md:mb-0">
-        <label htmlFor={`name-${course.id}`} className="mb-1 block text-sm font-medium text-muted md:sr-only">
-          Course name
-        </label>
+    <li className="row-in rounded-xl border border-line bg-surface p-3">
+      <div className="flex items-center gap-2">
         <input
-          id={`name-${course.id}`}
-          className={inputCls}
+          aria-label={`Course ${n} name`}
+          className={`${inputCls} flex-1`}
           type="text"
           placeholder={`Course ${n}`}
           value={course.name}
           onChange={(e) => onChange(course.id, "name", e.target.value)}
         />
-      </div>
-
-      <div className="mb-3 grid grid-cols-2 gap-3 md:contents">
-        <div>
-          <label htmlFor={`pct-${course.id}`} className="mb-1 block text-sm font-medium text-muted md:sr-only">
-            Percentage
-          </label>
-          <input
-            id={`pct-${course.id}`}
-            className={`${inputCls} ${pctBad ? "border-red-500" : ""}`}
-            type="text"
-            inputMode="decimal"
-            placeholder="0–100"
-            value={course.percentage}
-            aria-invalid={pctBad}
-            aria-describedby={pctBad ? `pct-err-${course.id}` : undefined}
-            onChange={(e) => onChange(course.id, "percentage", e.target.value)}
-          />
-          {pctBad && (
-            <p id={`pct-err-${course.id}`} className="mt-1 text-xs text-red-600">
-              Enter a number from 0 to 100.
-            </p>
-          )}
-        </div>
-        <div>
-          <label htmlFor={`cr-${course.id}`} className="mb-1 block text-sm font-medium text-muted md:sr-only">
-            Credit hours
-          </label>
-          <input
-            id={`cr-${course.id}`}
-            className={`${inputCls} ${crBad ? "border-red-500" : ""}`}
-            type="text"
-            inputMode="decimal"
-            placeholder="e.g. 3"
-            value={course.credits}
-            aria-invalid={crBad}
-            aria-describedby={crBad ? `cr-err-${course.id}` : undefined}
-            onChange={(e) => onChange(course.id, "credits", e.target.value)}
-          />
-          {crBad && (
-            <p id={`cr-err-${course.id}`} className="mt-1 text-xs text-red-600">
-              Must be greater than 0.
-            </p>
-          )}
-        </div>
-      </div>
-
-      <div className="flex items-center justify-between gap-3 md:contents">
-        <div className="flex items-center gap-4 md:contents" aria-live="polite">
-          <p className="text-sm md:flex md:h-10 md:items-center md:justify-center">
-            <span className="text-muted md:sr-only">Grade </span>
-            <span className={`inline-block min-w-10 rounded-md px-2 py-0.5 text-center font-semibold ${graded ? "bg-brand-100 text-brand-700" : "text-muted"}`}>
-              {graded ? graded.letter : "—"}
-            </span>
-          </p>
-          <p className="text-sm md:flex md:h-10 md:items-center md:justify-center">
-            <span className="text-muted md:sr-only">Points </span>
-            <span className="font-semibold tabular-nums">{graded ? graded.point.toFixed(2) : "—"}</span>
-          </p>
-        </div>
+        <input
+          aria-label={`Course ${n} percentage`}
+          className={`${inputCls} w-20 shrink-0 sm:w-32 ${pctBad ? "border-red-500" : ""}`}
+          type="text"
+          inputMode="decimal"
+          placeholder="Percent"
+          value={course.percentage}
+          aria-invalid={pctBad}
+          onChange={(e) => onChange(course.id, "percentage", e.target.value)}
+        />
+        <input
+          aria-label={`Course ${n} credit hours`}
+          className={`${inputCls} w-16 shrink-0 sm:w-28 ${crBad ? "border-red-500" : ""}`}
+          type="text"
+          inputMode="decimal"
+          placeholder="Credits"
+          value={course.credits}
+          aria-invalid={crBad}
+          onChange={(e) => onChange(course.id, "credits", e.target.value)}
+        />
         <button
           type="button"
           onClick={() => onRemove(course.id)}
           aria-label={`Remove course ${course.name.trim() || n}`}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-muted hover:bg-red-50 hover:text-red-600"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-muted hover:bg-red-500/10 hover:text-danger"
         >
           <Trash2 size={18} aria-hidden="true" />
         </button>
       </div>
+
+      {(pctBad || crBad) && (
+        <p className="mt-2 text-xs text-danger" role="alert">
+          {pctBad && "Percentage must be a number from 0 to 100. "}
+          {crBad && "Credit hours must be greater than 0."}
+        </p>
+      )}
+
+      <p className="mt-3 flex items-center gap-6 text-sm" aria-live="polite">
+        <span>
+          <span className="text-muted">Grade: </span>
+          <span className={`inline-block min-w-8 rounded-md px-2 py-0.5 text-center font-semibold ${graded ? "bg-brand-100 text-brand-text" : "text-muted"}`}>
+            {graded ? graded.letter : "—"}
+          </span>
+        </span>
+        <span>
+          <span className="text-muted">Points: </span>
+          <span className="font-semibold tabular-nums">{graded ? graded.point.toFixed(2) : "—"}</span>
+        </span>
+      </p>
     </li>
   );
 }

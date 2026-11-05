@@ -1,39 +1,26 @@
 "use client";
 
-import { Moon, SunMedium } from "lucide-react";
-import { useEffect, useState } from "react";
-
-type Theme = "light" | "dark";
+import { Moon, Sun } from "lucide-react";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
-
-  useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const nextTheme = stored ?? (systemPrefersDark ? "dark" : "light");
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const isDark = theme === "dark";
+  function toggle() {
+    const isDark = document.documentElement.classList.toggle("dark");
+    try {
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    } catch {
+      // storage unavailable: the choice just won't be remembered
+    }
+  }
 
   return (
     <button
       type="button"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-2 text-sm font-medium text-ink shadow-sm transition hover:border-brand-200 hover:text-brand-700"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      onClick={toggle}
+      aria-label="Switch between light and dark mode"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-line text-ink hover:bg-brand-50"
     >
-      {isDark ? <SunMedium size={16} aria-hidden="true" /> : <Moon size={16} aria-hidden="true" />}
-      {isDark ? "Light" : "Dark"}
+      <Moon size={18} aria-hidden="true" className="theme-icon-moon" />
+      <Sun size={18} aria-hidden="true" className="theme-icon-sun" />
     </button>
   );
 }

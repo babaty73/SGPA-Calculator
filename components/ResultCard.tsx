@@ -59,11 +59,11 @@ export default function ResultCard({ result }: { result: SGPAResult }) {
       )}
 
       {hasResult && (
-        <div className="mt-6 flex items-center gap-3">
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <button
             type="button"
             onClick={copy}
-            className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2.5 font-medium text-[#4a24a8] hover:bg-[#f5f2ff]"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 font-medium text-[#4a24a8] hover:bg-[#f5f2ff] sm:w-auto"
           >
             {status === "copied" ? <Check size={18} aria-hidden="true" /> : <Copy size={18} aria-hidden="true" />}
             Copy result

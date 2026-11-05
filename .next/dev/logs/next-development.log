@@ -1,16 +1,21 @@
-{"timestamp":"00:03:47.793","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 770ms. If /home/imran/Desktop/imran-website/projects/astu-sgpa-phase2/astu-sgpa/.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
-{"timestamp":"00:03:56.412","source":"Server","level":"LOG","message":"- Cache Components enabled"}
-{"timestamp":"00:03:56.413","source":"Server","level":"LOG","message":"- Partial Prefetching enabled"}
-{"timestamp":"00:03:56.414","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:03:59.532","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:05:41.676","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:24:00.109","source":"Server","level":"LOG","message":"✓ Compiled in 4.4s"}
-{"timestamp":"00:24:03.325","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:25:58.960","source":"Server","level":"LOG","message":"✓ Compiled in 8.7s"}
-{"timestamp":"00:26:02.038","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:28:15.464","source":"Server","level":"LOG","message":"✓ Compiled in 157ms"}
-{"timestamp":"00:28:44.621","source":"Server","level":"LOG","message":"○ Compiling /_not-found/page ..."}
-{"timestamp":"00:28:47.263","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:29:13.709","source":"Server","level":"LOG","message":"✓ Compiled in 32s"}
-{"timestamp":"00:29:31.539","source":"Server","level":"LOG","message":"✓ Finished filesystem cache database compaction in 13.5s"}
-{"timestamp":"00:29:37.711","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:20.754","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 543ms. If /home/imran/Desktop/imran-website/projects/astu-sgpa-phase2/astu-sgpa/.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
+{"timestamp":"00:00:25.026","source":"Server","level":"LOG","message":"- Cache Components enabled"}
+{"timestamp":"00:00:25.027","source":"Server","level":"LOG","message":"- Partial Prefetching enabled"}
+{"timestamp":"00:00:25.029","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:28.105","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:00:54.373","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:03:23.751","source":"Server","level":"LOG","message":"✓ Compiled in 6.7s"}
+{"timestamp":"00:03:43.007","source":"Server","level":"LOG","message":"✓ Compiled in 6.3s"}
+{"timestamp":"00:05:35.059","source":"Server","level":"LOG","message":"✓ Compiled in 2s"}
+{"timestamp":"00:06:15.428","source":"Server","level":"LOG","message":"✓ Compiled in 973ms"}
+{"timestamp":"00:06:17.732","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:06:23.492","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"00:06:38.581","source":"Server","level":"LOG","message":"✓ Compiled in 82ms"}
+{"timestamp":"00:06:46.093","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
+{"timestamp":"00:07:02.703","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
+{"timestamp":"00:19:39.847","source":"Server","level":"LOG","message":"✓ Finished writing to filesystem cache in 25.8s"}
+{"timestamp":"00:20:16.335","source":"Server","level":"LOG","message":"✓ Finished writing to filesystem cache in 17.7s"}
+{"timestamp":"00:20:37.889","source":"Server","level":"LOG","message":"✓ Compiled in 151ms"}
+{"timestamp":"00:21:36.621","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:24:19.944","source":"Server","level":"LOG","message":"✓ Compiled in 9.9s"}
+{"timestamp":"00:24:54.033","source":"Server","level":"LOG","message":"✓ Compiled in 2s"}

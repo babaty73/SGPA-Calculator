@@ -9,7 +9,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-4xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-start sm:justify-between sm:py-8">
           <div className="min-w-0">
             <h1 className="text-2xl font-bold leading-tight sm:text-3xl">
-              ASTU SGPA Calculator
+              SGPA Calculator
             </h1>
             <p className="mt-1 text-muted">Calculate your semester GPA in seconds.</p>
           </div>

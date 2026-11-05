@@ -39,7 +39,7 @@ return (
           className={`${inputCls} ${pctBad ? "border-red-500" : ""} sm:w-28`}
           type="text"
           inputMode="decimal"
-          placeholder="%"
+          placeholder="100"
           value={course.percentage}
           aria-invalid={pctBad}
           onChange={(e) => onChange(course.id, "percentage", e.target.value)}

@@ -53,17 +53,17 @@ export default function ResultCard({ result }: { result: SGPAResult }) {
           </div>
         </dl>
       ) : (
-        <p className="mt-4 text-white">
+        <p className="mt-4 text-brand-100">
           Fill in a course name, percentage, and credit hours to see your SGPA.
         </p>
       )}
 
       {hasResult && (
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="mt-6 flex items-center gap-3">
           <button
             type="button"
             onClick={copy}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 font-medium text-[#4a24a8] hover:bg-[#f5f2ff] sm:w-auto"
+            className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2.5 font-medium text-[#4a24a8] hover:bg-[#f5f2ff]"
           >
             {status === "copied" ? <Check size={18} aria-hidden="true" /> : <Copy size={18} aria-hidden="true" />}
             Copy result

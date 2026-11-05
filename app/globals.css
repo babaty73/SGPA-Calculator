@@ -50,16 +50,6 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img, svg {
-  display: block;
-  max-width: 100%;
 }
 
 :focus-visible {

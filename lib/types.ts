@@ -28,3 +28,25 @@ export interface SGPAResult {
   totalWeightedPoints: number;
   courses: GradedCourse[];
 }
+
+export interface Semester {
+  id: string;
+  name: string;
+  sgpa: string;    // raw input, validated in cgpa.ts
+  credits: string; // raw input, validated in cgpa.ts
+}
+
+export interface ValidSemester {
+  id: string;
+  name: string;
+  sgpa: number;
+  credits: number;
+}
+
+export interface CGPAResult {
+  cgpa: number | null; // null when there are no valid semesters
+  totalSemesters: number;
+  totalCredits: number;
+  totalWeightedPoints: number;
+  semesters: ValidSemester[];
+}

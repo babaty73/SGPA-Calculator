@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SGPA Calculator",
-  description: "Calculate Your Semester GPA in Seconds.",
+  title: "ASTU SGPA Calculator",
+  description: "Calculate Your Semester GPA in Seconds. Made for ASTU students.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

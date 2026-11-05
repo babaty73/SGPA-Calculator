@@ -1,6 +1,16 @@
-{"timestamp":"00:00:48.713","source":"Server","level":"LOG","message":"- Cache Components enabled"}
-{"timestamp":"00:00:48.715","source":"Server","level":"LOG","message":"- Partial Prefetching enabled"}
-{"timestamp":"00:00:48.716","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:48.722","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 825ms. If /home/imran/Desktop/imran-website/projects/astu-sgpa-phase2/astu-sgpa/.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
-{"timestamp":"00:00:51.884","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:01:37.820","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:03:47.793","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 770ms. If /home/imran/Desktop/imran-website/projects/astu-sgpa-phase2/astu-sgpa/.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
+{"timestamp":"00:03:56.412","source":"Server","level":"LOG","message":"- Cache Components enabled"}
+{"timestamp":"00:03:56.413","source":"Server","level":"LOG","message":"- Partial Prefetching enabled"}
+{"timestamp":"00:03:56.414","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:03:59.532","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:05:41.676","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:24:00.109","source":"Server","level":"LOG","message":"✓ Compiled in 4.4s"}
+{"timestamp":"00:24:03.325","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:25:58.960","source":"Server","level":"LOG","message":"✓ Compiled in 8.7s"}
+{"timestamp":"00:26:02.038","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:28:15.464","source":"Server","level":"LOG","message":"✓ Compiled in 157ms"}
+{"timestamp":"00:28:44.621","source":"Server","level":"LOG","message":"○ Compiling /_not-found/page ..."}
+{"timestamp":"00:28:47.263","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:29:13.709","source":"Server","level":"LOG","message":"✓ Compiled in 32s"}
+{"timestamp":"00:29:31.539","source":"Server","level":"LOG","message":"✓ Finished filesystem cache database compaction in 13.5s"}
+{"timestamp":"00:29:37.711","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}

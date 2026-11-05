@@ -16,14 +16,13 @@ export default function Home() {
         <Calculator />
         <div className="grid gap-6 md:grid-cols-2 md:items-start">
           <GradeScale />
-          <HowItWorks />
         </div>
       </main>
 
       <footer className="border-t border-line">
         <p className="mx-auto max-w-4xl px-4 py-6 text-sm text-muted">
-          Made for Adama Science and Technology University students. Always check your official grade report.
-        </p>
+          Developed by <a href="https://imran-endris.vercel.app">Imran Endris</a>
+           </p>
       </footer>
     </>
   );

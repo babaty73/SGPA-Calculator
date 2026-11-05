@@ -10,7 +10,7 @@ interface Props {
 }
 
 const inputCls =
-  "w-full rounded-lg border border-line bg-white px-3 py-2 text-base text-ink placeholder:text-muted/60 focus:border-brand-500";
+  "w-full rounded-lg border border-line bg-[var(--color-input)] px-3 py-2 text-base text-ink placeholder:text-muted/70 focus:border-brand-500";
 
 export default function CourseRow({ course, index, onChange, onRemove }: Props) {
   const n = index + 1;
@@ -20,7 +20,7 @@ export default function CourseRow({ course, index, onChange, onRemove }: Props) 
   const crBad = course.credits.trim() !== "" && parseCredits(course.credits) === null;
 
   return (
-    <li className="row-in rounded-xl border border-line bg-white p-3 md:grid md:grid-cols-[minmax(0,1fr)_7rem_7rem_4.5rem_4.5rem_2.5rem] md:items-start md:gap-3 md:rounded-none md:border-0 md:border-b md:bg-transparent md:px-0 md:py-2">
+    <li className="row-in rounded-xl border border-line bg-[var(--color-surface)] p-3 md:grid md:grid-cols-[minmax(0,1fr)_7rem_7rem_4.5rem_4.5rem_2.5rem] md:items-start md:gap-3 md:rounded-none md:border-0 md:border-b md:bg-transparent md:px-0 md:py-2">
       <div className="mb-3 md:mb-0">
         <label htmlFor={`name-${course.id}`} className="mb-1 block text-sm font-medium text-muted md:sr-only">
           Course name

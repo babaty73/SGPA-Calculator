@@ -1,6 +1,6 @@
 export default function HowItWorks() {
   return (
-    <section aria-labelledby="how-heading" className="rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
+    <section aria-labelledby="how-heading" className="rounded-2xl border border-line bg-[var(--color-surface)] p-4 shadow-sm sm:p-6">
       <h2 id="how-heading" className="text-lg font-semibold">How it works</h2>
       <ol className="mt-3 list-decimal space-y-2 pl-5 text-ink">
         <li>Enter each course with its percentage and credit hours.</li>

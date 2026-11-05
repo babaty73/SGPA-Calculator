@@ -14,7 +14,7 @@ interface Props {
 
 export default function CourseTable({ courses, onUpdate, onAdd, onRemove, onReset }: Props) {
   return (
-    <section aria-labelledby="courses-heading" className="rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
+    <section aria-labelledby="courses-heading" className="rounded-2xl border border-line bg-[var(--color-surface)] p-4 shadow-sm sm:p-6">
       <div className="mb-4 flex items-center justify-between gap-3">
         <h2 id="courses-heading" className="text-lg font-semibold">Your courses</h2>
         <button

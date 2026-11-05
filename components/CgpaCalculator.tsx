@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import SemesterTable from "./SemesterTable";
 import CgpaResultCard from "./CgpaResultCard";
-import CgpaNote from "./CgpaNote";
 import { calculateCGPA } from "@/lib/cgpa";
 import type { Semester } from "@/lib/types";
 
@@ -26,7 +25,6 @@ export default function CgpaCalculator() {
         onReset={() => setSemesters(initialSemesters())}
       />
       <CgpaResultCard result={result} />
-      <CgpaNote />
     </div>
   );
 }

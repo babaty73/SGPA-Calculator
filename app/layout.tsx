@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ASTU SGPA Calculator",
+  title: "GPA Calculator",
   description: "Calculate Your Semester GPA in Seconds. Made for ASTU students.",
 };
 

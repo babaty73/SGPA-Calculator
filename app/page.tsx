@@ -1,6 +1,5 @@
 import ModeSwitcher from "@/components/ModeSwitcher";
 import GradeScale from "@/components/GradeScale";
-import HowItWorks from "@/components/HowItWorks";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
@@ -9,7 +8,7 @@ export default function Home() {
       <header className="border-b border-line bg-surface">
         <div className="mx-auto flex max-w-4xl items-start justify-between gap-4 px-4 py-6 sm:py-8">
           <div>
-            <h1 className="text-2xl font-bold sm:text-3xl">ASTU SGPA Calculator</h1>
+            <h1 className="text-2xl font-bold sm:text-3xl">GPA Calculator</h1>
             <p className="mt-1 text-muted">Calculate your semester GPA in seconds.</p>
           </div>
           <ThemeToggle />
@@ -20,7 +19,6 @@ export default function Home() {
         <ModeSwitcher>
           <div className="grid gap-6 md:grid-cols-2 md:items-start">
             <GradeScale />
-            <HowItWorks />
           </div>
         </ModeSwitcher>
       </main>

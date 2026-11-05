@@ -53,7 +53,7 @@ export default function ResultCard({ result }: { result: SGPAResult }) {
           </div>
         </dl>
       ) : (
-        <p className="mt-4 text-brand-100">
+        <p className="mt-4 text-white">
           Fill in a course name, percentage, and credit hours to see your SGPA.
         </p>
       )}

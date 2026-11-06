@@ -12,7 +12,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 const metadata = {
-    title: "ASTU SGPA Calculator",
+    title: "GPA Calculator",
     description: "Calculate Your Semester GPA in Seconds. Made for ASTU students."
 };
 function RootLayout({ children }) {
